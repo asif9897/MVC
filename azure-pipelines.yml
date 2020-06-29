@@ -29,8 +29,7 @@ steps:
     DeploymentType: 'webDeploy'
     RemoveAdditionalFilesFlag: true
     ExcludeFilesFromAppDataFlag: false
-  inputs:
-    restoreSolution: '$(solution)'
+
 
 - task: VSBuild@1
   inputs:
