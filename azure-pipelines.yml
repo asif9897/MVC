@@ -18,6 +18,17 @@ steps:
 - task: NuGetToolInstaller@1
 
 - task: NuGetCommand@2
+- task: AzureRmWebAppDeployment@4
+  inputs:
+    ConnectionType: 'AzureRM'
+    azureSubscription: 'Azure subscription 1(e06f322f-ed54-466d-b833-982058bbba2c)'
+    appType: 'webApp'
+    WebAppName: 'shopspro'
+    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
+    enableCustomDeployment: true
+    DeploymentType: 'webDeploy'
+    RemoveAdditionalFilesFlag: true
+    ExcludeFilesFromAppDataFlag: false
   inputs:
     restoreSolution: '$(solution)'
 
