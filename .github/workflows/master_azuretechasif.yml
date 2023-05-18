@@ -52,6 +52,6 @@ jobs:
         uses: azure/webapps-deploy@v2
         with:
           app-name: 'AzureTechAsif'
-          slot-name: 'Production'
+          slot-name: 'staging'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_1E78F24C05E241B484E2F1AA45E292F8 }}
           package: .
